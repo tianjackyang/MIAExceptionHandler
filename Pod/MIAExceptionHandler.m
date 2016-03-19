@@ -10,8 +10,8 @@
 
 void onUncaughtException(NSException* exception)
 {
-    DDLogError(@"Crash: %@", exception);
-    DDLogError(@"Stack Trace: %@", [exception callStackSymbols]);
+    NSLog(@"Crash: %@", exception);
+    NSLog(@"Stack Trace: %@", [exception callStackSymbols]);
     
     [MIAExceptionHandler handleException];
 }
